@@ -1,0 +1,86 @@
+/* Centrar el formulario en la pantalla */
+.flight-form-container {
+    width: 90%;
+    max-width: 40rem;
+    background: #1c1f26;
+    padding: 2rem;
+    border: 1px solid #3a3f4b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: #cdd0d5;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0.5rem;
+  
+    /* Centrado */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Centrar el contenido del formulario */
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  label {
+    flex: 1 1 40%;
+    color: #9ca3af;
+  }
+  
+  input,
+  textarea {
+    flex: 1 1 50%;
+    padding: 0.5rem;
+    background: #282c34;
+    border: 1px solid #3a3f4b;
+    color: #cdd0d5;
+    border-radius: 0.3rem;
+  }
+  
+  /* Botones */
+  .add-button {
+    width: 2rem;
+    height: 2rem;
+    background: #3a3f4b;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    align-self: center;
+  }
+  
+  .add-button:hover {
+    background: #555b6e;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    background: #282c34;
+    color: #cdd0d5;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: 1px solid #3a3f4b;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+  }
+  
+  .submit-button:hover {
+    background: #3a3f4b;
+  }
+  
