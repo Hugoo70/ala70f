@@ -49,7 +49,6 @@ body, html {
 }
 
 .login-input {
-    width: 100%;
     padding: 0.8rem;
     border: 1px solid #3a3f4b;
     background: #282c34;

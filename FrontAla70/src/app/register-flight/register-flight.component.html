@@ -1,4 +1,3 @@
-<button (click)="goBack()">Volver a Inicio</button>
 <div class="flight-form-container">
     <h2 class="title">REGISTRO DE VUELO</h2>
   
@@ -8,7 +7,11 @@
       <label>Mercancía:</label>
       <input type="text" />
       <label>Avión:</label>
-      <input type="text" />
+      <select>
+        <option value="1">AIRBUS 310</option>
+        <option value="2">AIRBUS 330</option>
+        <option value="3">FALCON</option>
+      </select>
     </div>
   
     <div class="form-section">
@@ -36,10 +39,30 @@
     <div class="form-section">
       <label>Anticipo:</label>
       <textarea></textarea>
-      <label>Tripulación:</label>
-      <button class="add-button">+</button>
     </div>
-  
+
+    <div class="form-section">
+      <h3>Tripulación</h3>
+      <button class="add-button" (click)="addCrewMember()">+</button>
+    </div>
+    
+    <div class="crew-members">
+      <div *ngFor="let member of crewMembers; let i = index" class="form-section">
+        <label>Nombre del Tripulante:</label>
+        <input type="text" [(ngModel)]="crewMembers[i].name" />
+    
+        <label>Rango:</label>
+        <select [(ngModel)]="crewMembers[i].rank">
+          <option value="Capitán">Capitán</option>
+          <option value="Copiloto">Copiloto</option>
+          <option value="Ingeniero de vuelo">Ingeniero de vuelo</option>
+        </select>
+    
+        <!-- Botón para eliminar el tripulante -->
+        <button class="remove-button" (click)="removeCrewMember(i)">❌</button>
+      </div>
+    </div>
+    
     <div class="form-section">
       <label>Líquido:</label>
       <input type="text" />
@@ -52,6 +75,7 @@
       <input type="text" />
     </div>
   
-    <button class="submit-button">Guardar</button>
-  </div>
+    <button class="button">Guardar</button>
+    <button class="button" (click)="goBack()">Volver</button>
+</div>
   
